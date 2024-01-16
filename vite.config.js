@@ -10,7 +10,6 @@ export default defineConfig({
         // target: "http://localhost:6000",
         target: "https://auth-api-nigx.onrender.com",
         changeOrigin: true,
-        // rewrite: (path) => path.replace(/^\/api/, ""),
       },
     },
   },

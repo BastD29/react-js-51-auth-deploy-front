@@ -13,11 +13,18 @@ export const authApi = createApi({
         method: "POST",
         body: data,
       }),
-      transformResponse: (response) => ({
-        user: response,
-        // token: response.token,
-        token: response.accessToken,
-      }),
+      // transformResponse: (response) => ({
+      //   user: response,
+      //   token: response.accessToken,
+      // }),
+      transformResponse: (response) => {
+        console.log("Response from server: ", response);
+
+        return {
+          user: response,
+          token: response ? response.accessToken : null,
+        };
+      },
     }),
     login: builder.mutation({
       query: (data) => ({
@@ -25,11 +32,18 @@ export const authApi = createApi({
         method: "POST",
         body: data,
       }),
-      transformResponse: (response) => ({
-        user: response,
-        // token: response.token,
-        token: response.accessToken,
-      }),
+      // transformResponse: (response) => ({
+      //   user: response,
+      //   token: response.accessToken,
+      // }),
+      transformResponse: (response) => {
+        console.log("Response from server: ", response);
+
+        return {
+          user: response,
+          token: response ? response.accessToken : null,
+        };
+      },
     }),
     refreshToken: builder.mutation({
       query: (refreshToken) => ({
