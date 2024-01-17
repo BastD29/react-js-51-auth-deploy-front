@@ -25,7 +25,11 @@ const Signup = () => {
       dispatch(setUser({ user: userData.user, token: userData.token }));
       navigate("/profile");
     } catch (error) {
-      console.error("Failed to signup:", error);
+      // console.error("Failed to signup:", error);
+      console.error(
+        "Failed to signup:",
+        error.response ? error.response.data : error
+      );
     }
   };
 

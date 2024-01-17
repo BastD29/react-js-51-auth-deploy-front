@@ -7,8 +7,8 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        // target: "http://localhost:6000",
-        target: "https://auth-api-nigx.onrender.com",
+        target: "http://localhost:6000",
+        // target: "https://auth-api-nigx.onrender.com",
         changeOrigin: true,
       },
     },
