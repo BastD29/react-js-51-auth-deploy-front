@@ -3,7 +3,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { logout } from "../auth/slice";
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: "/api",
+  // baseUrl: "/api",
+  baseUrl: "https://auth-api-nigx.onrender.com/api",
   prepareHeaders: (headers, { getState }) => {
     const token = localStorage.getItem("accessToken");
     if (token) {
