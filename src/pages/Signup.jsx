@@ -1,8 +1,12 @@
-import { useDispatch } from "react-redux";
-import { Navigate, useLocation, useNavigate } from "react-router-dom";
-import { useSignupMutation } from "../store/auth/apiSlice";
-import { setUser } from "../store/auth/slice";
 import { useState } from "react";
+
+import { Navigate, useLocation, useNavigate } from "react-router-dom";
+
+import { useDispatch } from "react-redux";
+
+import { useSignupMutation } from "../store/auth/apiSlice";
+
+import { setUser } from "../store/auth/slice";
 
 const Signup = () => {
   const navigate = useNavigate();
